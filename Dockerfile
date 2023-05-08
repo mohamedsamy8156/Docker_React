@@ -6,5 +6,7 @@ COPY . .
 RUN npm run build 
 
 
+
+
 FROM nginx
 COPY --from=phase1 ./app/build /usr/share/nginx/html
